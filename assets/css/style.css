@@ -177,6 +177,47 @@ main article .description {
   padding: 1.5vh 5%;
 }
 
+.newsletter {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.newsletter input {
+  padding: 1vh 5%;
+}
+.newsletter input:last-of-type {
+  font-size: medium;
+  text-decoration: none;
+  color: #737373;
+  background-color: #ebccc2;
+  margin: 2vh;
+}
+
+.contact {
+  width: 50%;
+  margin: 5vh auto;
+}
+.contact h3 {
+  text-align: center;
+}
+.contact label {
+  font-size: medium;
+  font-weight: 300;
+}
+.contact input,
+.contact textarea {
+  display: block;
+}
+.contact input:last-of-type {
+  font-size: medium;
+  text-decoration: none;
+  color: #737373;
+  background-color: #ebccc2;
+  padding: 1vh 5%;
+  margin-top: 2vh;
+}
+
 .loungerimg {
   background: url("../img/section-voyager.jpg") center/cover no-repeat;
 }

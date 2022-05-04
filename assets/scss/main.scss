@@ -123,10 +123,7 @@ main {
 
 // shop-page
 .shopitem {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    @include flexit-column;
 
     h3 {
         font-size: 3rem;
@@ -140,6 +137,52 @@ main {
         color: $tertiary-color;
         background-color: $main-color;
         padding: 1.5vh 5%;
+    }
+}
+
+//subscribe & contact
+.newsletter {
+    @include flexit-column;
+
+    input {
+        padding: 1vh 5%;
+    }
+
+    input:last-of-type {
+        font-size: medium;
+        text-decoration: none;
+        color: $tertiary-color;
+        background-color: $main-color;
+        margin: 2vh;
+    }
+
+}
+
+.contact {
+    width: 50%;
+    margin: 5vh auto;
+
+    h3 {
+        text-align: center;
+    }
+
+    label {
+        font-size: medium;
+        font-weight: 300;
+    }
+
+    input,
+    textarea {
+        display: block;
+    }
+
+    input:last-of-type {
+        font-size: medium;
+        text-decoration: none;
+        color: $tertiary-color;
+        background-color: $main-color;
+        padding: 1vh 5%;
+        margin-top: 2vh;
     }
 }
 
