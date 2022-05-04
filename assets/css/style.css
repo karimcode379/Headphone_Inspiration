@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600&display=swap");
+/* ================================ 
+        GENERAL STYLES
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: "Work Sans", sans-serif;
+  background-color: #2e2e2e;
+  color: #ebccc2;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.wrapper2 {
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* ================================ 
+        OVERALL STYLES
+================================ */
+h1,
+h2 {
+  font-weight: 300;
+  font-size: 4rem;
+  line-height: 1.5;
+}
+
+h4 {
+  font-size: 2.2rem;
+  font-weight: 200;
+  padding-bottom: 2vh;
+}
+
+p {
+  color: #737373;
+  font-size: 1.8rem;
+  font-weight: 200;
+  line-height: 1.5;
+  margin: 2vh 0;
+}
+
+header {
+  display: flex;
+  position: fixed;
+  top: 5vh;
+  left: 3%;
+  right: 5%;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 300;
+}
+header img {
+  width: 48px;
+}
+header > ul {
+  list-style: none;
+  font-size: 1.4rem;
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+}
+header > ul a {
+  color: #867772;
+  text-decoration: none;
+}
+header > ul > li:nth-of-type(2) {
+  width: 38%;
+}
+header > ul > li ul {
+  list-style: none;
+  font-size: 1.4rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+header > ul > li ul a {
+  color: #867772;
+  text-decoration: none;
+}
+header > ul a:hover {
+  color: #ebccc2;
+  text-decoration: underline;
+}
+
+main h1 {
+  margin: 20vh 35% 20vh 25%;
+}
+main img {
+  max-width: 100%;
+}
+main video {
+  display: block;
+  width: 90%;
+  margin: 22vh auto;
+}
+main article {
+  margin: 20vh 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+main article .aboutimg {
+  background: url("../img/BS1_NYC_Home.webp") center/cover no-repeat;
+}
+main article .description {
+  padding: 5vh 0 5vh 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fullpage {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 55% 45%;
+}
+.fullpage .description {
+  padding: 5vh 19% 5vh 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.fullpage .description h2 {
+  margin: 5vh 0 8vh 0;
+}
+
+.inspiration h4 {
+  font-size: 2.2rem;
+  font-weight: 200;
+}
+.inspiration h2 {
+  margin-bottom: 4vh;
+}
+.inspiration span {
+  color: #737373;
+  padding: 1vh 2vh;
+  border: 1px solid;
+}
+
+.inspiration-article {
+  margin: 10vh 0;
+  display: grid;
+  grid-template-rows: 55vh 55vh;
+}
+
+.shopitem {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.shopitem h3 {
+  font-size: 3rem;
+  font-weight: 300;
+  padding-bottom: 3vh;
+}
+.shopitem a {
+  font-size: medium;
+  text-decoration: none;
+  color: #737373;
+  background-color: #ebccc2;
+  padding: 1.5vh 5%;
+}
+
+.loungerimg {
+  background: url("../img/section-voyager.jpg") center/cover no-repeat;
+}
+
+.experienceimg {
+  background: url("../img/section-experience-1.jpg") center/cover no-repeat;
+}
+
+.shopimg {
+  background: url("../img/section-composition4.jpg") center/cover no-repeat;
+}
+
+.inspirationimg1 {
+  background: url("../img/ETC_6.webp") center/cover no-repeat;
+}
+
+.inspirationimg2 {
+  background: url("../img/ETC_5.webp") center/cover no-repeat;
+}
+
+aside {
+  font-weight: 600;
+  margin-left: 2%;
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+aside ul {
+  list-style: none;
+  font-size: 1.4rem;
+  width: 20%;
+  position: relative;
+}
+aside ul a {
+  color: #867772;
+  text-decoration: none;
+}
+aside .bullpoint {
+  padding: 10px 0 10px 50px;
+}
+aside .bullpoint::before {
+  content: "";
+  position: absolute;
+  width: 1.4rem;
+  height: 1.4rem;
+  border: 1px solid #867772;
+  border-radius: 50%;
+  left: 0;
+  transform: translateX(-50%);
+}
+aside .sideline {
+  border-left: 0.5px solid #867772;
+  height: 7vh;
+}
+aside a {
+  transition: color 0.3s linear;
+}
+aside a:hover {
+  color: #ebccc2;
+  transition: color 0.5s linear;
+}
+aside .active::before {
+  box-shadow: 0 0 0 4px #2e2e2e, 0 0 0 5px #ebccc2;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,57 @@
+@import "_variables.scss";
+
+/* ================================ 
+        GENERAL STYLES
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+    font-family: 'Work Sans', sans-serif;
+    background-color: $background-color;
+    color: $main-color;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.wrapper2 {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* ================================ 
+        OVERALL STYLES
+================================ */
+h1,
+h2 {
+    font-weight: 300;
+    font-size: $large;
+    line-height: 1.5;
+}
+
+h4 {
+    font-size: 2.2rem;
+    font-weight: 200;
+    padding-bottom: 2vh;
+}
+
+p {
+    color: $tertiary-color;
+    font-size: $medium;
+    font-weight: 200;
+    line-height: 1.5;
+    margin: 2vh 0;
+}
