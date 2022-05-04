@@ -242,5 +242,8 @@ aside a:hover {
 aside .active::before {
   box-shadow: 0 0 0 4px #2e2e2e, 0 0 0 5px #ebccc2;
 }
+aside .active a {
+  color: #ebccc2;
+}
 
 /*# sourceMappingURL=style.css.map */

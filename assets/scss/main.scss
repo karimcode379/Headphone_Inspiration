@@ -7,11 +7,44 @@
 
 
 header {
-    @include fixedheader;
+    display: flex;
+    position: fixed;
+    top: 5vh;
+    left: 3%;
+    right: 5%;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 300;
+
+    img {
+        width: 48px;
+    }
+
+    &>ul {
+        @include liststyle;
+        width: 40%;
+        display: flex;
+        justify-content: space-around;
+
+        &>li:nth-of-type(2) {
+            width: 38%;
+        }
+
+        &>li ul {
+            @include liststyle;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        a:hover {
+            color: #ebccc2;
+            text-decoration: underline;
+        }
+    }
 }
 
 main {
-
     h1 {
         margin: 20vh 35% 20vh 25%;
     }
@@ -110,6 +143,7 @@ main {
     }
 }
 
+//background-images
 .loungerimg {
     background: url('../img/section-voyager.jpg') center / cover no-repeat;
 }
@@ -130,66 +164,56 @@ main {
     background: url('../img/ETC_5.webp') center / cover no-repeat;
 }
 
-
+//side menu
 aside {
-    @include asidemenu;
+    font-weight: 600;
+    margin-left: 2%;
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    ul {
+        @include liststyle;
+        width: 20%;
+        position: relative;
+    }
+
+    .bullpoint {
+        padding: 10px 0 10px 50px;
+    }
+
+    .bullpoint::before {
+        content: "";
+        position: absolute;
+        width: 1.4rem;
+        height: 1.4rem;
+        border: 1px solid $secondary-color;
+        border-radius: 50%;
+        left: 0;
+        transform: translateX(-50%);
+    }
+
+    .sideline {
+        border-left: .5px solid $secondary-color;
+        height: 7vh;
+    }
+
+    a {
+        transition: color .3s linear;
+    }
+
+    a:hover {
+        color: $main-color;
+        transition: color .5s linear;
+    }
 
     .active::before {
         box-shadow: 0 0 0 4px $background-color,
             0 0 0 5px $main-color;
+    }
 
+    .active a {
+        color: $main-color;
     }
 }
-
-// nav {
-//     @include flexit;
-
-//     h1 {
-//         font-size: 2rem;
-//     }
-
-//     ul {
-//         @include flexit;
-
-//         li {
-//             list-style: none;
-//             margin-right: 10px;
-//         }
-//     }
-// }
-
-// .card {
-//     margin: 100px 0;
-//     display: grid;
-//     grid-template-columns: repeat(4, 1fr);
-//     gap: 20px;
-
-//     &-image {
-//         width: 100%;
-
-//     }
-
-//     &-title {
-//         color: $main-color;
-//     }
-
-//     p {
-//         color: $secondary-color;
-//     }
-
-//     figure {
-//         background-color: lightgray;
-
-//         &:nth-of-type(2) h2 {
-//             color: gold;
-//         }
-
-//         &:hover {
-//             box-shadow: 0 0 10px #000;
-//         }
-//     }
-// }
-
-// article h3 {
-//     @include styletext(32px, 400, pink, "", uppercase, #000)
-// }
