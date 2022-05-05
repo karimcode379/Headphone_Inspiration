@@ -70,7 +70,7 @@ header img {
 header > ul {
   list-style: none;
   font-size: 1.4rem;
-  width: 40%;
+  width: 600px;
   display: flex;
   justify-content: space-around;
 }
@@ -79,7 +79,7 @@ header > ul a {
   text-decoration: none;
 }
 header > ul > li:nth-of-type(2) {
-  width: 38%;
+  width: 250px;
 }
 header > ul > li ul {
   list-style: none;
@@ -97,6 +97,41 @@ header > ul a:hover {
   text-decoration: underline;
 }
 
+#bigMac {
+  display: none;
+}
+#bigMac span {
+  display: block;
+  background-color: #ebccc2;
+  width: 30px;
+  height: 5px;
+  margin: 4px 0;
+  border-radius: 2px;
+}
+
+#mobileMenu {
+  width: 100%;
+  background-color: rgba(46, 46, 46, 0.9);
+  position: absolute;
+  top: 100%;
+  right: -110%;
+  transition: right 0.5s linear;
+}
+#mobileMenu ul {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  line-height: 2;
+  border: 1px solid;
+}
+#mobileMenu a {
+  color: #ebccc2;
+  text-decoration: none;
+}
+
 main h1 {
   margin: 20vh 35% 20vh 25%;
 }
@@ -111,7 +146,8 @@ main video {
 main article {
   margin: 20vh 8%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
 }
 main article .aboutimg {
   background: url("../img/BS1_NYC_Home.webp") center/cover no-repeat;
@@ -285,6 +321,31 @@ aside .active::before {
 }
 aside .active a {
   color: #ebccc2;
+}
+
+@media only screen and (max-width: 768px) {
+  header .topnav {
+    display: none;
+  }
+  header #bigMac {
+    display: block;
+  }
+
+  main article {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+  main h1 {
+    margin: 20vh 0 20vh 0;
+  }
+  main .fullpage {
+    grid-template-columns: 1fr;
+    grid-template-rows: 40% 1fr;
+  }
+
+  aside {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

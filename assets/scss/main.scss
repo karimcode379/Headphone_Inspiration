@@ -5,7 +5,7 @@
 @import "_variables.scss";
 // Farben: #2e2e2e / #867772 / #ebccc2 / #fff / rgb(115, 115, 115) 
 
-
+// topnav
 header {
     display: flex;
     position: fixed;
@@ -22,12 +22,12 @@ header {
 
     &>ul {
         @include liststyle;
-        width: 40%;
+        width: 600px;
         display: flex;
         justify-content: space-around;
 
         &>li:nth-of-type(2) {
-            width: 38%;
+            width: 250px;
         }
 
         &>li ul {
@@ -41,6 +41,45 @@ header {
             color: #ebccc2;
             text-decoration: underline;
         }
+    }
+}
+
+// mobilenav
+#bigMac {
+    display: none;
+
+    span {
+        display: block;
+        background-color: $main-color;
+        width: 30px;
+        height: 5px;
+        margin: 4px 0;
+        border-radius: 2px;
+    }
+}
+
+#mobileMenu {
+    width: 100%;
+    background-color: rgba(46, 46, 46, 0.9);
+    position: absolute;
+    top: 100%;
+    right: -110%;
+    transition: right 0.5s linear;
+
+    ul {
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        line-height: 2;
+        border: 1px solid;
+    }
+
+    a {
+        color: $main-color;
+        text-decoration: none;
     }
 }
 
@@ -62,7 +101,8 @@ main {
     article {
         margin: 20vh 8%;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
 
         .aboutimg {
             background: url('../img/BS1_NYC_Home.webp') center / cover no-repeat;
@@ -258,5 +298,37 @@ aside {
 
     .active a {
         color: $main-color;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        .topnav {
+            display: none;
+        }
+
+        #bigMac {
+            display: block;
+        }
+    }
+
+    main {
+        article {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+        }
+
+        h1 {
+            margin: 20vh 0 20vh 0;
+        }
+
+        .fullpage {
+            grid-template-columns: 1fr;
+            grid-template-rows: 40% 1fr;
+        }
+    }
+
+    aside {
+        display: none;
     }
 }
