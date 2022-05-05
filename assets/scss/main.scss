@@ -183,6 +183,7 @@ main {
 //subscribe & contact
 .newsletter {
     @include flexit-column;
+    margin-top: 10vh;
 
     input {
         padding: 1vh 5%;

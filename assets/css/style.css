@@ -218,6 +218,7 @@ main article .description {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  margin-top: 10vh;
 }
 .newsletter input {
   padding: 1vh 5%;
